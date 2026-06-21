@@ -47,7 +47,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
 
           {/* connecting line (desktop only) */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-[2px] bg-gray-100 -z-10"></div>
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-100 -z-10"></div>
 
           {steps.map((step, index) => (
             <motion.div

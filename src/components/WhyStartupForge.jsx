@@ -28,13 +28,13 @@ export default function WhyStartupForge() {
   ];
 
   return (
-    <section className="relative w-full py-24 overflow-hidden bg-gradient-to-b from-white via-indigo-50/30 to-white">
+    <section className="relative w-full py-24 overflow-hidden bg-linear-to-b from-white via-indigo-50/30 to-white">
 
       {/* 🌈 Soft Background Glow Layer */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-100 rounded-full blur-3xl opacity-40" />
-        <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-purple-100 rounded-full blur-3xl opacity-30" />
-        <div className="absolute top-1/2 left-10 w-[400px] h-[400px] bg-blue-100 rounded-full blur-3xl opacity-30" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-150 bg-indigo-100 rounded-full blur-3xl opacity-40" />
+        <div className="absolute bottom-0 right-10 w-125 h-125 bg-purple-100 rounded-full blur-3xl opacity-30" />
+        <div className="absolute top-1/2 left-10 w-100 h-100 bg-blue-100 rounded-full blur-3xl opacity-30" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
