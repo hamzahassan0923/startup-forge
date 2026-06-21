@@ -333,6 +333,8 @@ export default function Navbar() {
                   }
                   alt="profile"
                   className="h-12 w-12 rounded-xl object-cover"
+                  width={48}
+                  height={48}
                 />
 
                 <div>
