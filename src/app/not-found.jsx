@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function NotFound() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-100 flex items-center justify-center px-6">
+    <main className="relative min-h-screen overflow-hidden bg-linear-to-br from-blue-50 via-white to-purple-100 flex items-center justify-center px-6">
       
       {/* Background Blur Effects */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20 animate-pulse" />
@@ -21,7 +21,7 @@ export default function NotFound() {
             duration: 0.8,
             type: "spring",
           }}
-          className="text-[120px] md:text-[180px] font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-none"
+          className="text-[120px] md:text-[180px] font-extrabold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-none"
         >
           404
         </motion.h1>
