@@ -27,7 +27,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Browse Startups", href: "/startups" },
   { name: "Opportunities", href: "/opportunities" },
-  { name: "Dashboard", href: "/dashboard" },
+  { name: "Pricing", href: "/pricing" },
 ];
 
 export default function Navbar() {

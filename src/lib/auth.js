@@ -6,6 +6,13 @@ const client = new MongoClient(process.env.MONGODB_URI);
 const db = client.db("startup-forge-auth");
 
 export const auth = betterAuth({
+    trustedOrigins: [
+
+    "http://localhost:3000",
+
+    "https://startup-forge-beryl.vercel.app",
+
+  ],
     emailAndPassword: {
         enabled: true,
     },
