@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { signIn } from "@/lib/auth-client";
+import { authClient, signIn } from "@/lib/auth-client";
 import { Mail, Lock } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
@@ -41,6 +41,12 @@ export default function SigninPage() {
 
     setLoading(false);
   };
+
+  const handleGoogleSignIn = async () => {
+      await authClient.signIn.social({
+        provider: "google"
+      })
+    }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-b from-white via-indigo-50/40 to-white px-4 py-10">
@@ -198,6 +204,7 @@ export default function SigninPage() {
 
         {/* Google Login */}
         <motion.button
+          onClick={handleGoogleSignIn}
           whileTap={{ scale: 0.97 }}
           whileHover={{ scale: 1.01 }}
           type="button"

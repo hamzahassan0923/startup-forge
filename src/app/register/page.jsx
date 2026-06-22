@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 import { FcGoogle } from "react-icons/fc";
-import { signUp } from "@/lib/auth-client";
+import { authClient, signUp } from "@/lib/auth-client";
 import Image from "next/image";
 
 export default function RegisterPage() {
@@ -144,6 +144,12 @@ export default function RegisterPage() {
 
     setLoading(false);
   };
+
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google"
+    })
+  }
 
   return (
     <section className="min-h-screen bg-linear-to-b from-white via-indigo-50/40 to-white flex items-center justify-center px-4 py-10 overflow-hidden relative">
@@ -459,6 +465,7 @@ export default function RegisterPage() {
 
           {/* Google Button */}
           <motion.button
+          onClick={handleGoogleSignIn}
             whileTap={{ scale: 0.97 }}
             whileHover={{ scale: 1.01 }}
             type="button"
