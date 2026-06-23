@@ -49,7 +49,7 @@ export default function FounderOverview() {
             >
               {/* Background Glow */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
+                className={`absolute inset-0 bg-linear-to-br ${item.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
               />
 
               <div className="relative flex items-center justify-between">
@@ -64,7 +64,7 @@ export default function FounderOverview() {
                 </div>
 
                 <div
-                  className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${item.color} shadow-lg`}
+                  className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br ${item.color} shadow-lg`}
                 >
                   <Icon className="h-8 w-8 text-white" />
                 </div>
