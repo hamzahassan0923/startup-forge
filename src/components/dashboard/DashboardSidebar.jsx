@@ -5,10 +5,10 @@ import Link from "next/link";
 export function DashboardSidebar() {
     const navItems = [
         { icon: House, href: "/dashboard/founder", label: "Dashboard Overview" },
-        { icon: Magnifier, href: "/dashboard/founder/my-startup", label: "My Startup" },
-        { icon: Bell, href: "/dashboard/founder/manage", label: "Manage Startup" },
-        { icon: Envelope, href: "/dashboard/founder/add-opportunities", label: "Add Opportunity" },
-        { icon: Person, href: "/dashboard/founder/manage-opportunities", label: "Manage Opportunities" },
+        { icon: Magnifier, href: "/dashboard/founder/startup/new", label: "My Startup" },
+        { icon: Bell, href: "/dashboard/founder/startup", label: "Manage Startup" },
+        { icon: Envelope, href: "/dashboard/founder/opportunity/new", label: "Add Opportunity" },
+        { icon: Person, href: "/dashboard/founder/opportunity", label: "Manage Opportunities" },
         { icon: Gear, href: "/dashboard/founder/applications", label: "Applications" },
     ];
 

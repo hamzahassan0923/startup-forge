@@ -3,9 +3,9 @@ import { DashboardSidebar } from "@/components/dashboard/DashboardSidebar";
 
 const LayoutPage = ({ children }) => {
     return (
-        <div className='flex min-h-screen'>
+        <div className='flex min-h-screen '>
         <DashboardSidebar></DashboardSidebar>
-            <div className='flex-1 p-4'>
+            <div className='flex-1'>
                 {children}
             </div>
         </div>
