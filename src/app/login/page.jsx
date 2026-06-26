@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useRouter,  } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { authClient, signIn } from "@/lib/auth-client";
 import { Mail, Lock } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
