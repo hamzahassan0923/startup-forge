@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter,  } from "next/navigation";
 import { authClient, signIn } from "@/lib/auth-client";
 import { Mail, Lock } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
@@ -17,8 +17,7 @@ export default function SigninPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const searchParams =  useSearchParams();
-  const redirectTo = searchParams.get("redirect") || "/";
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,7 +34,7 @@ export default function SigninPage() {
       if (res?.error) {
         setError(res.error.message || "Login failed");
       } else {
-        router.push(redirectTo);
+        router.push('/');
       }
     } catch (err) {
       setError("Something went wrong. Try again.");
@@ -224,7 +223,7 @@ export default function SigninPage() {
         <p className="mt-8 text-center text-sm text-gray-500">
           Don&apos;t have an account?{" "}
           <Link
-            href={`/register`}
+            href={'/register'}
             className="font-medium text-indigo-600 hover:text-indigo-500"
           >
             Create Account
