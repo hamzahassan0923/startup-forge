@@ -22,13 +22,14 @@ import {
   useSession,
   signOut,
 } from "@/lib/auth-client";
-
-const navLinks = [
+  const navLinks = [
   { name: "Home", href: "/" },
   { name: "Browse Startups", href: "/startups" },
   { name: "Opportunities", href: "/opportunities" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Dashboard", href: "/dashboard/founder" },
+
 ];
+
 
 export default function Navbar() {
 
@@ -45,6 +46,7 @@ export default function Navbar() {
   const { data: session } = useSession();
 
   const user = session?.user;
+  console.log(user,"user")
 
   // LOGOUT
   const handleLogout = async () => {
@@ -64,6 +66,20 @@ export default function Navbar() {
       console.log(error);
     }
   };
+
+
+const dashBoardLinks ={
+  collaborator:'/dashboard/collaborator'
+  ,founder:'/dashBoard/founder'
+}
+if(user?.email){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+  navLinks.push(
+    {
+      label:'Dashboard',
+      href:dashBoardLinks[user.role ||'collaborator']
+    }
+  )
+}
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur-xl">
@@ -112,14 +128,14 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-2 md:flex">
 
-          {navLinks.map((link) => {
+          {navLinks.map((link,index) => {
 
-            const active =
+           const active =
               pathname === link.href;
 
             return (
               <Link
-                key={link.name}
+                key={index+1}
                 href={link.href}
                 className={`rounded-xl px-4 py-2 text-sm font-medium transition-all duration-300 ${
                   active
@@ -385,3 +401,11 @@ export default function Navbar() {
     </header>
   );
 }
+
+
+
+
+
+
+
+
