@@ -90,7 +90,7 @@ export default function RegisterPage() {
         formData.append("image", image);
 
         const apiKey =
-          process.env.NEXT_PUBLIC_IMGBB_API_KEY;
+          process.env.NEXT_PUBLIC_IMAGE_UPLOAD_API;
 
         const imgbbURL =
           `https://api.imgbb.com/1/upload?key=${apiKey}`;
